@@ -1,21 +1,109 @@
+@font-face {
+    font-family: Chalk;
+    src: url(/fonts/FrederickatheGreat-Regular.ttf);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #385263;
+   }
+
 .game {
     position: relative;
     background-image: url('images/MathGame.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100%;
+    font-family: Chalk, sans-serif;
   }
+
+    .game h1 {
+        color: white;
+        font-size: 3em;
+        margin: 0;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 15%;
+    }
+
+    .game p {
+        color: white;
+        font-size: 1.5em;
+        margin: 0;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        width: 15%;
+    }
   
   #start {
-    position: relative;
-    position: sticky;
+    position: absolute;
+    top: 45%;
+    left: 43%;
+    background-color: #417D78;
+    color: white;
+    border-radius: 15%;
+    font-size: 1.5em;
   }
   
   #question {
     position: absolute;
-    top: 100px;
-    left: 100px;
+    top: 20%;
+    left: 41%;
+    font-size: 3em;
   }
+
+  #time {
+    position: absolute;
+    top: 25%;
+    left: 38.5%;
+    font-size: 2em;
+  }
+
+    #answer {
+        position: absolute;
+        top: 40%;
+        left: 37%;
+        font-size: 1.5em;
+    }
+
+    #score {
+        position: absolute;
+        top: 10%;
+        right: 9%;
+        font-size: 4em;
+        color: white;
+    }
+
+    #highscore {
+        position: absolute;
+        top: 25%;
+        right: 9%;
+        font-size: 2.5em;
+        color: white;
+    }
+
+    #operation {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 15%;
+        top: 50%;
+        left: 38.5%;
+      }
+      
+      #operation input[type="radio"] {
+        transform: scale(1.5);
+      }
+      
+      #operation label {
+        align-items: center;
+        font-size: 1.2em;
+      }

@@ -12,24 +12,29 @@
     <div class="container">
       <div class="row">
             <div class="container game">
+            <div class="game1">
                 <h1>10 Sec Maths Game</h1>
                 <p>Answer as many questions as you can in 10 seconds, correct answers add 1 second.</p>
-                <button id="start">Start</button>
+            </div>
+            <div class="game2">
                 <div id="question"></div>
-                <input id="answer" type="number">
                 <div id="time"></div>
+                <input id="answer" type="number">
+                <button id="start">Start</button>
+                <div id="operation">
+                  <input type="radio" id="add" name="operation" value="add" checked>
+                  <label for="add">+</label><br>
+                  <input type="radio" id="sub" name="operation" value="sub">
+                  <label for="sub">-</label><br>
+                  <input type="radio" id="mul" name="operation" value="mul">
+                  <label for="mul">x</label><br>
+                  <input type="radio" id="div" name="operation" value="div">
+                  <label for="div">&divide</label>
+                </div>
+            </div>
+            <div class="game3">
                 <div id="score"></div>
                 <div id="highscore"></div>
-                <div id="operation">
-                    <input type="radio" id="add" name="operation" value="add" checked>
-                    <label for="add">+</label><br>
-                    <input type="radio" id="sub" name="operation" value="sub">
-                    <label for="sub">-</label><br>
-                    <input type="radio" id="mul" name="operation" value="mul">
-                    <label for="mul">x</label><br>
-                    <input type="radio" id="div" name="operation" value="div">
-                    <label for="div">&divide</label>
-                  </div>
             </div>
       </div>
     </div>

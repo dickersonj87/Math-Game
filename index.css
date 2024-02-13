@@ -1,220 +1,181 @@
 @font-face {
-    font-family: Chalk;
-    src: url(/fonts/FrederickatheGreat-Regular.ttf);
+  font-family: Chalk;
+  src: url(/fonts/FrederickatheGreat-Regular.ttf);
 }
 
 html, body {
-    height: 100%;
-    width: 100%;
-    background-color: #385263;
-   }
+  height: 100%;
+  width: 100%;
+  background-color: #385263;
+}
 
 .game {
-    position: relative;
-    background-image: url('images/MathGame.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    font-family: Chalk, sans-serif;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  width: 100%;
+  padding: 5em;
+  font-family: Chalk, sans-serif;
+  background-image: url('images/MathGame.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
-  @media screen and (max-width: 431px) {
-    .game {
-      position: relative;
+.game1, .game2, .game3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.game1 h1 {
+  color: white;
+  font-size: 3em;
+  margin: 0;
+  width: 50%;
+}
+
+.game1 p {
+  color: white;
+  font-size: 1.5em;
+  margin-top: 1%;
+  width: 100%;
+}
+
+.game2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 17%;
+  margin-top: 5%;
+  margin-bottom: 40%;
+} 
+
+#start {
+  background-color: #417D78;
+  color: white;
+  border-radius: 15%;
+  font-size: 1.5em;
+  width: 50%;
+}
+
+#question {
+  font-size: 3em;
+}
+
+#time {
+  font-size: 2em;
+}
+
+#answer {
+  font-size: 1.5em;
+}
+
+.game3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+}
+
+#score {
+  font-size: 5em;
+  color: white;
+}
+
+#highscore {
+  font-size: 2.5em;
+  color: white;
+  width: 100%;
+}
+
+#operation {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+#operation input[type="radio"] {
+  transform: scale(1.5);
+}
+
+#operation label {
+  align-items: center;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 400px) {
+  .game {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
       background-image: url('images/mathgamemobile.png');
       background-size: contain;
       background-repeat: no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      width: 100%;
-      font-family: Chalk, sans-serif;
-    }
+      padding: 0.1%;
   }
 
-    .game h1 {
-        color: white;
-        font-size: 3em;
-        margin: 0;
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        width: 15%;
-    }
-
-    @media screen and (max-width: 431px) {
-      .game h1 {
-        color: white;
-        font-size: 2.5em;
-        margin: 0;
-        position: absolute;
-        top: 2%;
-        left: 10%;
-        width: 80%
-      }
-    }
-
-    .game p {
-        color: white;
-        font-size: 1.5em;
-        margin: 0;
-        position: absolute;
-        top: 30%;
-        left: 10%;
-        width: 15%;
-    }
-
-    @media screen and (max-width: 431px) {
-      .game p {
-        color: white;
-        font-size: 1.2em;
-        margin: 0;
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        width: 80%;
-      }
-    }
-  
-  #start {
-    position: absolute;
-    top: 45%;
-    left: 43%;
-    background-color: #417D78;
-    color: white;
-    border-radius: 15%;
-    font-size: 1.5em;
+  .game1, .game3 {
+    flex-direction: row;
+    flex-basis: 100%;
+    margin: 0;
   }
 
-  @media screen and (max-width: 431px) {
-    #start {
-      position: absolute;
-      top: 60%;
-      left: 30%;
-      background-color: #417D78;
-      color: white;
-      border-radius: 15%;
-      font-size: 1.5em;
-    }
+  .game h1 {
+    font-size: 2.5em;
+    width: 100%
   }
-  
-  #question {
-    position: absolute;
-    top: 20%;
-    left: 41%;
+
+  .game1 p {
+    font-size: .95em;
+    width: 80%;
+  }
+
+  .game1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: top;
+    margin-left: 1%;
+    margin-top: 0;
+    margin-bottom: 10%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .game2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30%;
+    margin-top: 10%;
+    /* margin-bottom: 50%; */
+    flex-direction: column;
+    flex-basis: 100%;
+    height: 45%;
+  }
+
+  .game2 > * {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .game3 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  #score {
     font-size: 3em;
   }
 
-  @media screen and (max-width: 431px) {
-    #question {
-      position: absolute;
-      top: 32%;
-      left: 24%;
-      font-size: 3em;
-    }
+  #highscore {
+    font-size: 1.5em;
+    width: 40%;
   }
 
-  #time {
-    position: absolute;
-    top: 25%;
-    left: 38.5%;
-    font-size: 2em;
+  #operation {
+    width: 70%;
   }
-
-  @media screen and (max-width: 431px) {
-    #time {
-      position: absolute;
-      top: 38%;
-      left: 17%;
-      font-size: 2em;
-    }
-  }
-
-    #answer {
-        position: absolute;
-        top: 40%;
-        left: 37%;
-        font-size: 1.5em;
-    }
-
-    @media screen and (max-width: 431px) {
-      #answer {
-        position: absolute;
-        top: 50%;
-        left: 13.5%;
-        font-size: 1.5em;
-      }
-    }
-
-    #score {
-        position: absolute;
-        top: 10%;
-        right: 9%;
-        font-size: 4em;
-        color: white;
-    }
-
-    @media screen and (max-width: 431px) {
-      #score {
-        position: absolute;
-        top: 18%;
-        right: 55%;
-        font-size: 3em;
-        color: white;
-      }
-    }
-
-    #highscore {
-        position: absolute;
-        top: 25%;
-        right: 9%;
-        font-size: 2.5em;
-        color: white;
-    }
-
-    @media screen and (max-width: 431px) {
-      #highscore {
-        position: absolute;
-        top: 19.5%;
-        right: 5%;
-        font-size: 2em;
-        color: white;
-        width: 40%;
-      }
-    }
-
-    #operation {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        width: 15%;
-        top: 50%;
-        left: 38.5%;
-      }
-
-      @media screen and (max-width: 431px) {
-        #operation {
-          position: absolute;
-          display: flex;
-          justify-content: space-between;
-          width: 40%;
-          top: 55%;
-          left: 18.5%;
-        }
-      }
-      
-      #operation input[type="radio"] {
-        transform: scale(1.5);
-      }
-      
-      #operation label {
-        align-items: center;
-        font-size: 1.2em;
-      }
+}
